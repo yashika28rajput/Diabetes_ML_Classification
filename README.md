@@ -1,14 +1,22 @@
-# Diabetes_ML_Classification
+# Diabetes Prediction Using Advanced Machine Learning
 ML-based diabetes prediction system
-## Overview
-This project predicts whether a patient is diabetic or not using Machine Learning classification algorithms.
+## Project Overview
 
-The system analyzes medical attributes such as glucose level, BMI, insulin, blood pressure, and age to classify diabetes risk.
+This project aims to predict diabetes using advanced supervised machine learning techniques based on medical diagnostic parameters such as glucose level, BMI, insulin, blood pressure, and age.
+
+The project focuses on improving prediction accuracy using advanced preprocessing, feature engineering, imbalance handling, and ensemble learning techniques.
 
 ---
 
-## Dataset
-The dataset contains the following features:
+## Problem Statement
+
+The primary objective of this project is to design, evaluate, and optimize an advanced diabetes classification model capable of accurately predicting whether a patient is diabetic or non-diabetic.
+
+---
+
+## Dataset Information
+
+The dataset contains medical attributes such as:
 
 - Pregnancies
 - Glucose
@@ -18,54 +26,98 @@ The dataset contains the following features:
 - BMI
 - Diabetes Pedigree Function
 - Age
-- Outcome
+- Outcome (Target Variable)
+
+Dataset Size:
+- 768 records
+- Binary Classification Problem
 
 ---
 
-## Technologies Used
+## Technologies & Libraries Used
 
 - Python
-- Pandas
 - NumPy
+- Pandas
 - Matplotlib
 - Seaborn
 - Scikit-Learn
+- XGBoost
+- Imbalanced-Learn (SMOTE)
 
 ---
 
-## Machine Learning Algorithms Used
+## Advanced Techniques Used
+
+### Data Preprocessing
+- Missing value handling
+- KNN Imputation
+- Feature Scaling using StandardScaler
+
+### Feature Engineering
+Created smart features such as:
+- BMI_Age_Ratio
+- Glucose_Insulin_Ratio
+- High_Glucose
+- High_BMI
+
+### Handling Imbalanced Data
+- SMOTE (Synthetic Minority Oversampling Technique)
+
+---
+
+## Machine Learning Models Used
 
 - Logistic Regression
-- Decision Tree
-- Random Forest
+- Random Forest Classifier
+- XGBoost Classifier
+- Stacking Classifier (Ensemble Learning)
 
 ---
 
-## Project Workflow
+## Evaluation Metrics
 
-1. Data Collection
-2. Data Preprocessing
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Model Training
-6. Model Evaluation
-7. Prediction
-
----
-
-## Results
-
-The model achieved good classification performance using evaluation metrics such as:
+The models were evaluated using:
 
 - Accuracy
 - Precision
 - Recall
 - F1-Score
 - ROC-AUC Score
+- Cross-Validation Accuracy
 
 ---
 
-## Folder Structure
+## Visualizations Included
+
+- Correlation Heatmap
+- Confusion Matrix
+- ROC Curve
+- Precision-Recall Curve
+- Feature Importance Graph
+- Violin Plots
+
+---
+
+## Results
+
+### Logistic Regression
+- Accuracy: ~69%
+- ROC-AUC: ~0.81
+
+### Random Forest
+- Accuracy: ~72%
+- ROC-AUC: ~0.82
+
+### Advanced Stacking Model
+- Accuracy: ~74%
+- ROC-AUC: ~0.817
+
+The ensemble-based approach improved prediction performance and handled complex medical patterns effectively.
+
+---
+
+## Project Structure
 
 ```bash
 Diabetes-ML-Classification/
@@ -76,20 +128,21 @@ Diabetes-ML-Classification/
 ├── README.md
 ├── requirements.txt
 ├── diabetes_prediction.py
+├── diabetes_prediction.ipynb
 └── Diabetes_Project_Report.docx
 ```
 
 ---
 
-## How to Run the Project
+## How to Run
 
-1. Install required libraries
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the Python file
+### Run the Project
 
 ```bash
 python diabetes_prediction.py
@@ -100,9 +153,9 @@ python diabetes_prediction.py
 ## Future Improvements
 
 - Deep Learning Integration
-- Web App Deployment
 - Explainable AI (XAI)
-- Real-time Prediction System
+- Streamlit/Flask Deployment
+- Real-Time Prediction System
 
 ---
 
