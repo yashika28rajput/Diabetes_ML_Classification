@@ -124,7 +124,6 @@ Diabetes-ML-Classification/
 │
 ├── dataset/
 ├── results/
-├── models/
 ├── README.md
 ├── requirements.txt
 ├── diabetes_prediction.py
